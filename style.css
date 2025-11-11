@@ -1,24 +1,60 @@
 body {
-    background-image: url(./img/background/photo-1668853853439-923e013afff1.jpeg);
+    background-image: url(./img/background/yellow-and-green-gradient-background-free-vector.jpg);
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
+.header {
+    margin: 0;
+    padding: 0;
+    width: 1200px;
+    height: 40px;
+}
 
 .judul {
     padding: 0;
     margin: 15px;
     display: flex;
     flex-direction: column;
-    width: 800px;
+    width: 1000px;
     height: 5rem;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    /* background-color: white; */
     
 }
 
-.judul h4 {
+.judul h3 {
     padding: 0;
     margin: 0;
+}
+
+.judul h5 {
+    margin-top: 10px;
+}
+
+
+.navbar {
+    padding: 0;
+    margin: 0;
+    width: 1000px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.hero {
+    margin: 0;
+    padding: 0;
+    
 }

@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="header">
-      <div class="judul">
-        <h3>SIJA QRNERATE</h3>
-        <h5>
-          platform ini menyediakan layanan untuk mengubah script menjadi sebuah
-          kode QR
-        </h5>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIJA QRNERATE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-      <div class="navbar">
-        <ul>
-          <li><a class="navbarItem" href="#">Home</a></li>
-          <li><a class="navbarItem" href="#">Tutorial</a></li>
-          <li><a class="navbarItem" href="#">Contact</a></li>
-          <li><a class="navbarItem" href="#">Feedback</a></li>
-        </ul>
+    <header class="header">
+        <h1>SIJA QRNERATE</h1>
+        <p class="subtitle">platform ini menyediakan layanan untuk mengubah script menjadi sebuah kode QR</p>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tutorial</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
         <hr />
-      </div>
-    </div>
+    </header>
 
-    <div class="hero">
-      <h4>Masukan url/text yang akan dijadikan kode QR dibawah ini:</h4>
-      <input type="text" placeholder="Masukan URL/Text disini!!!" />
-    </div>
-  </body>
+    <section class="hero">
+        <h3>Masukan url/text yang akan dijadikan kode QR dibawah ini:</h3>
+
+        <div class="input-group">
+            <input id="qrInput" type="text" placeholder="Masukan URL/Text disini!!!">
+            <button onclick="generateQR()">Generate</button>
+        </div>
+
+        <div id="qrContainer" class="qr-card" style="display:none;">
+            <div id="qrResult"></div>
+
+            <button id="downloadBtn" onclick="downloadQR()">Download QR</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>

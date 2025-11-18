@@ -1,60 +1,149 @@
+/* Background */
 body {
-    background-image: url(./img/background/yellow-and-green-gradient-background-free-vector.jpg);
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-image: url("./img/background/yellow-and-green-gradient-background-free-vector.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
+/* Header */
 .header {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.header h1 {
     margin: 0;
-    padding: 0;
-    width: 1200px;
-    height: 40px;
+    font-size: 32px;
+    font-weight: bold;
 }
 
-.judul {
-    padding: 0;
-    margin: 15px;
-    display: flex;
-    flex-direction: column;
-    width: 1000px;
-    height: 5rem;
-    align-items: center;
-    justify-content: center;
-    /* background-color: white; */
-    
+.subtitle {
+    margin-top: 5px;
+    font-size: 14px;
+    opacity: 0.85;
 }
 
-.judul h3 {
-    padding: 0;
-    margin: 0;
-}
-
-.judul h5 {
-    margin-top: 10px;
-}
-
-
+/* Navbar */
 .navbar {
-    padding: 0;
-    margin: 0;
-    width: 1000px;
+    margin-top: 20px;
 }
 
 .navbar ul {
+    list-style: none;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
-    list-style-type: none;
+    justify-content: center;
+    gap: 40px;
 }
 
 .navbar a {
     text-decoration: none;
+    font-weight: bold;
     color: black;
+    transition: 0.2s;
 }
 
+.navbar a:hover {
+    color: rgb(0, 80, 0);
+}
+
+/* Divider */
+header hr {
+    margin-top: 15px;
+    width: 80%;
+    border: 0;
+    height: 1px;
+    background: black;
+    opacity: 0.6;
+}
+
+/* Hero Section */
 .hero {
-    margin: 0;
-    padding: 0;
-    
+    text-align: center;
+    margin-top: 40px;
+}
+
+.hero h3 {
+    font-size: 18px;
+}
+
+/* Input + Button Group (Sejajar) */
+.input-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-group input {
+    width: 60%;
+    max-width: 450px;
+    height: 45px;
+    border: 1px solid #666;
+    border-right: none;
+    padding: 0 12px;
+    font-size: 15px;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+}
+
+.input-group button {
+    height: 45px;
+    padding: 0 20px;
+    background: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 0 8px 8px 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.input-group button:hover {
+    background: #222;
+}
+
+/* QR Card Modern */
+.qr-card {
+    margin: 30px auto 0 auto;
+    width: 260px;
+    padding: 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.qr-card img {
+    border-radius: 8px;
+}
+
+/* Button Download */
+#downloadBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #08a700;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+    width: 100%;
+}
+
+#downloadBtn:hover {
+    background: #00831c;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }

@@ -418,6 +418,7 @@ header hr {
     }
 
     .qr-group input {
+        width: 100%;
         margin-right: 8px;
     }
 

@@ -305,3 +305,140 @@ header hr {
     font-weight: bold;
     text-align: center;
 }
+
+@media (max-width: 900px) {
+
+    /* Navbar */
+    .navbar ul {
+        gap: 25px;
+        font-size: 14px;
+    }
+
+    /* Input */
+    .input-group input {
+        width: 70%;
+        max-width: 400px;
+    }
+
+    /* QR Card */
+    .qr-card {
+        width: 240px;
+        padding: 18px;
+    }
+
+    /* About, Tutorial, Feedback Containers */
+    .about-container,
+    .tutorial-container,
+    .feedback-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .tutorial-list {
+        font-size: 16px;
+    }
+}
+
+/* HP Sedang (max-width: 600px) */
+@media (max-width: 600px) {
+
+    /* Header */
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    /* Navbar */
+    .navbar ul {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /* Input */
+    .input-group {
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto 0 auto;
+    }
+
+    .input-group input {
+        width: 100%;
+        border-radius: 8px;
+        border-right: 1px solid #666;
+    }
+
+    .input-group button {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 8px;
+    }
+
+    /* QR Card */
+    .qr-card {
+        width: 90%;
+        max-width: 280px;
+    }
+
+    /* Feedback */
+    .feedback-title {
+        font-size: 26px;
+    }
+
+    .feedback-input,
+    .feedback-textarea {
+        font-size: 14px;
+    }
+
+    .feedback-btn {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+/* HP Kecil (max-width: 420px) */
+@media (max-width: 420px) {
+
+    /* Header Text */
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+    }
+
+    /* Navbar */
+    .navbar ul {
+        gap: 10px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    /* Hero */
+    .hero h3 {
+        font-size: 15px;
+    }
+
+    /* QR Container */
+    .qr-card {
+        padding: 15px;
+    }
+
+    /* Feedback */
+    .feedback-title {
+        font-size: 22px;
+    }
+
+    .feedback-subtitle {
+        font-size: 13px;
+    }
+}

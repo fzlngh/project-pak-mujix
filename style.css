@@ -1,3 +1,5 @@
+/* Updated CSS with balanced input + feedback responsiveness */
+
 /* Background */
 body {
     margin: 0;
@@ -62,27 +64,22 @@ header hr {
     opacity: 0.6;
 }
 
-
-/* Hero Section */
+/* Hero */
 .hero {
     text-align: center;
     margin-top: 40px;
 }
+.hero h3 { font-size: 18px; }
 
-.hero h3 {
-    font-size: 18px;
-}
-
-/* Input + Button Group (Sejajar) */
+/* Input Group */
 .input-group {
     margin-top: 20px;
     display: flex;
     justify-content: center;
 }
-
 .input-group input {
-    width: 100%;
-    max-width: 500px;
+    width: 60%;
+    max-width: 450px;
     height: 45px;
     border: 1px solid #666;
     border-right: none;
@@ -91,7 +88,6 @@ header hr {
     border-radius: 8px 0 0 8px;
     outline: none;
 }
-
 .input-group button {
     height: 45px;
     padding: 0 20px;
@@ -103,12 +99,11 @@ header hr {
     cursor: pointer;
     transition: 0.2s;
 }
-
 .input-group button:hover {
     background: #222;
 }
 
-/* QR Card Modern */
+/* QR Card */
 .qr-card {
     margin: 30px auto 0 auto;
     width: 260px;
@@ -121,12 +116,9 @@ header hr {
     align-items: center;
     animation: fadeIn 0.4s ease-in-out;
 }
+.qr-card img { border-radius: 8px; }
 
-.qr-card img {
-    border-radius: 8px;
-}
-
-/* Button Download */
+/* Download Button */
 #downloadBtn {
     margin-top: 15px;
     padding: 10px 20px;
@@ -139,90 +131,9 @@ header hr {
     transition: 0.2s;
     width: 100%;
 }
+#downloadBtn:hover { background: #00831c; }
 
-#downloadBtn:hover {
-    background: #00831c;
-}
-
-/* Fade Animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-.about-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 25px;
-    background: rgb(200, 252, 186);
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
-}
-
-.title {
-    margin: 0;
-    font-size: 32px;
-    color: #1b5e20;
-    text-align: center;
-}
-
-.description {
-    margin-top: 15px;
-    font-size: 17px;
-    line-height: 1.5;
-    color: #333;
-    text-align: justify;
-}
-
-.contact-card {
-    margin-top: 25px;
-    padding: 20px;
-    background: #c2ff7c;
-    border-left: 5px solid #4caf50;
-    border-radius: 10px;
-}
-
-.contact-card h2 {
-    margin-top: 0;
-    color: #2e7d32;
-}
-
-.contact-card p {
-    margin: 8px 0;
-    font-size: 16px;
-}
-
-.tutorial-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 25px;
-    background:  rgb(200, 252, 186);
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-}
-
-.tutorial-list {
-    margin-top: 20px;
-    padding-left: 25px;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-}
-
-.tutorial-list li {
-    margin-bottom: 10px;
-}
-
-.note {
-    margin-top: 25px;
-    font-size: 16px;
-    padding: 15px;
-    background: #f1f8e9;
-    border-left: 5px solid #4caf50;
-    border-radius: 10px;
-    color: #2e7d32;
-}
-
+/* Feedback Container */
 .feedback-container {
     max-width: 600px;
     margin: 60px auto;
@@ -233,34 +144,37 @@ header hr {
     backdrop-filter: blur(4px);
 }
 
-/* Judul */
+/* Ensure all inner elements stay inside container */
+.feedback-container *,
+.feedback-form *,
+.feedback-input,
+.feedback-textarea {
+    box-sizing: border-box;
+}
+
 .feedback-title {
     text-align: center;
     font-size: 32px;
     margin: 0;
     font-weight: bold;
 }
-
 .feedback-subtitle {
     text-align: center;
     margin-top: 8px;
     font-size: 16px;
     opacity: 0.8;
 }
-
-/* Form */
 .feedback-form {
     margin-top: 25px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
-
 .feedback-label {
     font-weight: bold;
     margin-bottom: 6px;
     margin-top: 15px;
 }
-
 .feedback-input,
 .feedback-textarea {
     width: 100%;
@@ -270,18 +184,10 @@ header hr {
     font-size: 15px;
     outline: none;
 }
-
-.feedback-input:focus,
-.feedback-textarea:focus {
-    border-color: #2e7d32;
-}
-
 .feedback-textarea {
     height: 130px;
     resize: none;
 }
-
-/* Button */
 .feedback-btn {
     margin-top: 20px;
     background: black;
@@ -292,153 +198,72 @@ header hr {
     cursor: pointer;
     font-size: 16px;
     transition: 0.2s;
+    width: 100%;
 }
+.feedback-btn:hover { background: #222; }
 
-.feedback-btn:hover {
-    background: #222;
-}
+/* --- RESPONSIVE IMPROVEMENTS --- */
 
-/* Status text */
-.feedback-status {
-    margin-top: 15px;
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-}
-
+/* Tablet */
 @media (max-width: 900px) {
-
-    /* Navbar */
-    .navbar ul {
-        gap: 25px;
-        font-size: 14px;
-    }
-
-    /* Input */
-    .input-group input {
-        width: 70%;
-        max-width: 450px;
-    }
-
-    /* QR Card */
-    .qr-card {
-        width: 240px;
-        padding: 18px;
-    }
-
-    /* About, Tutorial, Feedback Containers */
+    .navbar ul { gap: 25px; font-size: 14px; }
+    .input-group input { width: 70%; max-width: 400px; }
     .about-container,
     .tutorial-container,
     .feedback-container {
         max-width: 90%;
         padding: 20px;
     }
-
-    .title {
-        font-size: 28px;
-    }
-
-    .tutorial-list {
-        font-size: 16px;
-    }
 }
 
-/* HP Sedang (max-width: 600px) */
+/* Mobile Medium */
 @media (max-width: 600px) {
+    .header h1 { font-size: 26px; }
+    .subtitle { font-size: 12px; }
 
-    /* Header */
-    .header h1 {
-        font-size: 26px;
-    }
-
-    .subtitle {
-        font-size: 12px;
-    }
-
-    /* Navbar */
-    .navbar ul {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    /* Input */
     .input-group {
         flex-direction: column;
         width: 90%;
         margin: 20px auto 0 auto;
     }
-
     .input-group input {
         width: 100%;
         border-radius: 8px;
         border-right: 1px solid #666;
     }
-
     .input-group button {
         width: 100%;
         margin-top: 10px;
         border-radius: 8px;
     }
 
-    /* QR Card */
-    .qr-card {
-        width: 90%;
-        max-width: 280px;
-    }
-
-    /* Feedback */
-    .feedback-title {
-        font-size: 26px;
-    }
-
+    /* Balance feedback spacing */
     .feedback-input,
-    .feedback-textarea {
-        font-size: 14px;
-    }
-
+    .feedback-textarea { font-size: 14px; }
     .feedback-btn {
         font-size: 15px;
         padding: 10px;
     }
 }
 
-/* HP Kecil (max-width: 420px) */
+/* Mobile Small */
 @media (max-width: 420px) {
+    .header h1 { font-size: 22px; }
+    .navbar ul { gap: 10px; }
+    .navbar a { font-size: 13px; }
 
-    /* Header Text */
-    .header h1 {
-        font-size: 22px;
+    /* Better balance */
+    .feedback-container {
+        width: 92%;
+        padding: 18px;
     }
 
-    .subtitle {
-        font-size: 11px;
-    }
+    .feedback-title { font-size: 22px; }
+    .feedback-subtitle { font-size: 13px; }
 
-    /* Navbar */
-    .navbar ul {
-        gap: 10px;
-    }
-
-    .navbar a {
-        font-size: 13px;
-    }
-
-    /* Hero */
-    .hero h3 {
-        font-size: 15px;
-    }
-
-    /* QR Container */
-    .qr-card {
-        padding: 15px;
-    }
-
-    /* Feedback */
-    .feedback-title {
-        font-size: 22px;
-    }
-
-    .feedback-subtitle {
-        font-size: 13px;
+    .input-group input,
+    .input-group button {
+        font-size: 14px;
+        height: 42px;
     }
 }

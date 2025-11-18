@@ -81,8 +81,8 @@ header hr {
 }
 
 .input-group input {
-    width: 60%;
-    max-width: 450px;
+    width: 100%;
+    max-width: 500px;
     height: 45px;
     border: 1px solid #666;
     border-right: none;
@@ -316,8 +316,8 @@ header hr {
 
     /* Input */
     .input-group input {
-        width: 70%;
-        max-width: 400px;
+        width: 100%;
+        max-width: 500px;
     }
 
     /* QR Card */

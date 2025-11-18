@@ -54,12 +54,14 @@ body {
 /* Divider */
 header hr {
     margin-top: 15px;
-    width: 80%;
+    width: 100%;
+    max-width: 100%;
     border: 0;
-    height: 1px;
+    height: 2px;
     background: black;
     opacity: 0.6;
 }
+
 
 /* Hero Section */
 .hero {
@@ -146,4 +148,160 @@ header hr {
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
     to { opacity: 1; transform: scale(1); }
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: rgb(200, 252, 186);
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+}
+
+.title {
+    margin: 0;
+    font-size: 32px;
+    color: #1b5e20;
+    text-align: center;
+}
+
+.description {
+    margin-top: 15px;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+}
+
+.contact-card {
+    margin-top: 25px;
+    padding: 20px;
+    background: #c2ff7c;
+    border-left: 5px solid #4caf50;
+    border-radius: 10px;
+}
+
+.contact-card h2 {
+    margin-top: 0;
+    color: #2e7d32;
+}
+
+.contact-card p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.tutorial-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background:  rgb(200, 252, 186);
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+.tutorial-list {
+    margin-top: 20px;
+    padding-left: 25px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.tutorial-list li {
+    margin-bottom: 10px;
+}
+
+.note {
+    margin-top: 25px;
+    font-size: 16px;
+    padding: 15px;
+    background: #f1f8e9;
+    border-left: 5px solid #4caf50;
+    border-radius: 10px;
+    color: #2e7d32;
+}
+
+.feedback-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgb(200, 252, 186);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    backdrop-filter: blur(4px);
+}
+
+/* Judul */
+.feedback-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.feedback-subtitle {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* Form */
+.feedback-form {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    margin-top: 15px;
+}
+
+.feedback-input,
+.feedback-textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #666;
+    font-size: 15px;
+    outline: none;
+}
+
+.feedback-input:focus,
+.feedback-textarea:focus {
+    border-color: #2e7d32;
+}
+
+.feedback-textarea {
+    height: 130px;
+    resize: none;
+}
+
+/* Button */
+.feedback-btn {
+    margin-top: 20px;
+    background: black;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.feedback-btn:hover {
+    background: #222;
+}
+
+/* Status text */
+.feedback-status {
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
 }

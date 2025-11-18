@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | SIJA QRNERATE</title>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("Fb-d0G_hUFZxRfqLb"); /* Ganti dengan Public Key EmailJS */
+        })();
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>SIJA QRNERATE</h1>
+        <p class="subtitle">platform ini menyediakan layanan untuk mengubah script menjadi sebuah kode QR</p>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./tutorial.html">Tutorial</a></li>
+                <li><a href="./about.html">Contact</a></li>
+                <li><a href="./feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+        <hr />
+    </header>
+
+    <div class="feedback-container">
+        <h1 class="feedback-title">Feedback</h1>
+        <p class="feedback-subtitle">Kami sangat menghargai masukan dari Anda!</p>
+
+        <form id="feedbackForm" class="feedback-form">
+            
+            <label class="feedback-label">Email Anda</label>
+            <input 
+                type="email" 
+                id="email" 
+                class="feedback-input" 
+                placeholder="Masukan email anda..." 
+                required
+            >
+
+            <label class="feedback-label">Pesan Feedback</label>
+            <textarea 
+                id="message" 
+                class="feedback-textarea" 
+                placeholder="Masukan pesan feedback anda..." 
+                required
+            ></textarea>
+
+            <button type="submit" class="feedback-btn">Kirim Feedback</button>
+
+            <p id="feedbackStatus" class="feedback-status"></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

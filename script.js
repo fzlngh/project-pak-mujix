@@ -37,3 +37,56 @@ function downloadQR() {
         })
         .catch(() => alert("Gagal mengunduh QR"));
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const about = document.querySelector(".about-container");
+    about.style.opacity = 0;
+    about.style.transition = "opacity 0.7s ease-in-out";
+
+    setTimeout(() => {
+        about.style.opacity = 1;
+    }, 150);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const box = document.querySelector(".tutorial-container");
+    box.style.opacity = 0;
+    box.style.transform = "translateY(20px)";
+    box.style.transition = "all 0.6s ease";
+
+    setTimeout(() => {
+        box.style.opacity = 1;
+        box.style.transform = "translateY(0)";
+    }, 150);
+});
+
+document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const status = document.getElementById("feedbackStatus");
+
+    if (email === "" || message === "") {
+        status.style.color = "red";
+        status.textContent = "Semua kolom harus diisi!";
+        return;
+    }
+
+    const params = {
+        email: email,
+        message: message
+    };
+
+    emailjs
+        .send("service_61ze56h", "template_cx819m6", params)
+        .then(() => {
+            status.style.color = "green";
+            status.textContent = "Feedback berhasil dikirim! Terima kasih 😊";
+            document.getElementById("feedbackForm").reset();
+        })
+        .catch(() => {
+            status.style.color = "red";
+            status.textContent = "Gagal mengirim feedback. Silakan coba lagi!";
+        });
+});
